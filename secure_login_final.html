@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Secure Access</title>
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    input[type="password"] {
+      padding: 10px;
+      font-size: 16px;
+      width: 220px;
+      border: none;
+      border-radius: 5px;
+      background-color: #222;
+      color: white;
+      text-align: center;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #555;
+    }
+    .message {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <h2>Secure Login</h2>
+  <input type="password" placeholder="Enter password..." id="passwordField"/>
+  <button onclick="showMessage()">Submit</button>
+  <div class="message" id="msg"></div>
+
+  <script>
+    function showMessage() {
+      document.getElementById('msg').innerText = "Access denied. Try again.";
+    }
+  </script>
+</body>
+</html>
